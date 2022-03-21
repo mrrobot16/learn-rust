@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "compile": "rustc src/main.rs",
+    "build": "cargo build",
+    "build:release": "cargo build --release",
+    "run": "cargo run",
+    "check": "cargo check"
+
+  }
+}

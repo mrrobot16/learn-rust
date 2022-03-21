@@ -1,0 +1,14 @@
+{
+  "name": "guessing_game",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "rustc src/main.rs",
+    "build": "cargo build",
+    "build:release": "yarn check && cargo build --release",
+    "build:run": "yarn check && yarn build && yarn run",
+    "build:check": "yarn check && yarn build",
+    "run": "cargo run",
+    "check": "cargo check",
+    "update": "cargo update"
+  }
+}

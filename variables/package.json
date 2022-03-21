@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "check:build": "cargo check && cargo build",
+    "check:build:run": "cargo check && cargo build && cargo run",
+    "run": "cargo run"
+  }
+}
