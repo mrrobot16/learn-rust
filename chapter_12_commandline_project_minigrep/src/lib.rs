@@ -1,3 +1,7 @@
+//! # Minigrep made by me
+//!
+//! `minigrep` is a personal version of grep.
+
 use std::fs;
 use std::error::Error;
 use std::env;
@@ -29,8 +33,20 @@ impl Config {
     
 }
 
+
+/// To Run program
+/// # Examples commands
+///
+/// ```
+/// cargo run frog poem.txt
+/// ```
+
+/// ```
+/// cargo run fRog poem.txt
+/// ```
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
+    println!("&config.query: {}, &contents: {}", &config.query, &contents);
     let results = if config.case_sensitive {
         search(&config.query, &contents)
     } else {
