@@ -1,6 +1,6 @@
 use std::env;
 use std::process;
-use minigrep::{Config, run};
+use newminigrep::{Config, run};
 
 fn main() {
     println!("Hello, world of commandline programs!");
