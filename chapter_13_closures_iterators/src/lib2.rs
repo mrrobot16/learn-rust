@@ -9,6 +9,7 @@ fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     let closure = |shoe: &Shoe | shoe.size == shoe_size;
     let filtered_shoes = shoes.filter(closure).collect();
     filtered_shoes
+    // or in one line use below.
     // shoes.into_iter().filter(|s| s.size == shoe_size).collect()
 }
 
