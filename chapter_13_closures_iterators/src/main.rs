@@ -1,20 +1,24 @@
-use std::thread; 
-use std::time::Duration;
-
 fn main() {
     println!("Hello, world of closures and iterators");
-    let simulated_user_specified_value = 10;
-    let simulated_random_number = 7;
+    let x = vec![1, 2, 3];
 
-    generate_workout(simulated_user_specified_value, simulated_random_number);
-}
+    // let equal_to_x = move |z| z == x;
+    let equal_to_x = |z| z == x;
 
-fn generate_workout(a: u32, b: u32) -> u32 {
-    return a + b
-}
+    println!("can't use x here: {:?}", x);
 
-fn simulated_expensive_calculation(intensity: u32) -> u32 {
-    println!("calculating slowly");
-    thread::sleep(Duration::from_secs(2));
-    intensity
+    let y = vec![1, 2, 3];
+
+    assert!(equal_to_x(y));
+    
+    let v1: Vec<i32> = vec![1, 2, 3];
+    let closure = |x| x + 1;
+    // v1.iter().map(|x| x + 1);
+    let map = v1.iter().map(closure);
+    // let map2 = v1.iter().map(closure);
+    // println!("closure: {:?}", closure);
+    // println!("map: {:#?}", map);
+    let v2: Vec<_> = map.collect();
+    println!("v2: {:#?}", v2);
+    assert_eq!(v2, vec![2, 3, 4]);
 }
