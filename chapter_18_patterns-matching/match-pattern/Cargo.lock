@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "match-pattern"
+name = "match_pattern"
 version = "0.1.0"
