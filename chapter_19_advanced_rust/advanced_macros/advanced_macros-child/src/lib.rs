@@ -43,6 +43,6 @@ pub struct Pancakes;
 
 impl HelloMacro for Pancakes {
     fn hello_macro() {
-        println!("Hello, Macro! My name is Pancakes!");
+        println!("Hello, Macro! My name is Pancakes! IN IMPL NOT MACRO");
     }
 }
