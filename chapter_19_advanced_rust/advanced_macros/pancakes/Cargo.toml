@@ -3,6 +3,10 @@ name = "pancakes"
 version = "0.1.0"
 edition = "2021"
 
+# [path]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+advanced_macros = { path = "../advanced_macros-child" }
+hello_macro_derive = { path = "../advanced_macros-child/hello_macro_derive" }

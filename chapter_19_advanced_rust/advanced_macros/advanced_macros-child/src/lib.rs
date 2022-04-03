@@ -39,10 +39,10 @@ pub trait HelloMacro {
 
 
 // #[derive(HelloMacro)]
-pub struct Pancakes;
+// pub struct Pancakes;
 
-impl HelloMacro for Pancakes {
-    fn hello_macro() {
-        println!("Hello, Macro! My name is Pancakes! IN IMPL NOT MACRO");
-    }
-}
+// impl HelloMacro for Pancakes {
+//     fn hello_macro() {
+//         println!("Hello, Macro! My name is Pancakes! IN IMPL NOT MACRO");
+//     }
+// }
